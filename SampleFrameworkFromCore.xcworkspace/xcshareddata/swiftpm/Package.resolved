@@ -1,5 +1,5 @@
 {
-  "originHash" : "bdcd2a116de3c00973c09e1d504b71c66d3e27ede6070272f39cee614d56c9d7",
+  "originHash" : "409d5a02e1cd8a05b15e15e4bd33ae09cbdbd58e8a7a3d5b9a6017f8663a0047",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/volodymyr-chekyrta/SampleReusableCore.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "8be9055a74f716b057fe989e0b5b54c8cafcb2a4"
+        "revision" : "27a4bd9e22c7bed4b333553ae1cd3583a52cbbcf",
+        "version" : "1.0.0"
       }
     }
   ],

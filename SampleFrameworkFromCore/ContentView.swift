@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MyFrameworkFromCore
 
 struct ContentView: View {
     var body: some View {
@@ -16,6 +17,12 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            print("Test MyFrameworkFromCore")
+            let impl = MyFrameworkImlementation()
+            impl.function1()
+            impl.function2()
+        }
     }
 }
 

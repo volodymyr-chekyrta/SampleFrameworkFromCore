@@ -11,7 +11,23 @@
 		078F6DAE2C3DC584009C2EA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078F6DAD2C3DC584009C2EA5 /* ContentView.swift */; };
 		078F6DB02C3DC585009C2EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078F6DAF2C3DC585009C2EA5 /* Assets.xcassets */; };
 		078F6DB42C3DC585009C2EA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078F6DB32C3DC585009C2EA5 /* Preview Assets.xcassets */; };
+		078F6DBC2C3DC885009C2EA5 /* MyFrameworkFromCore in Frameworks */ = {isa = PBXBuildFile; productRef = 078F6DBB2C3DC885009C2EA5 /* MyFrameworkFromCore */; };
+		078F6DBD2C3DC885009C2EA5 /* MyFrameworkFromCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 078F6DBB2C3DC885009C2EA5 /* MyFrameworkFromCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		078F6DBE2C3DC886009C2EA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				078F6DBD2C3DC885009C2EA5 /* MyFrameworkFromCore in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		078F6DA82C3DC584009C2EA5 /* SampleFrameworkFromCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleFrameworkFromCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078F6DBC2C3DC885009C2EA5 /* MyFrameworkFromCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +55,7 @@
 			children = (
 				078F6DAA2C3DC584009C2EA5 /* SampleFrameworkFromCore */,
 				078F6DA92C3DC584009C2EA5 /* Products */,
+				078F6DBA2C3DC885009C2EA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +87,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		078F6DBA2C3DC885009C2EA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,12 +104,16 @@
 				078F6DA42C3DC584009C2EA5 /* Sources */,
 				078F6DA52C3DC584009C2EA5 /* Frameworks */,
 				078F6DA62C3DC584009C2EA5 /* Resources */,
+				078F6DBE2C3DC886009C2EA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SampleFrameworkFromCore;
+			packageProductDependencies = (
+				078F6DBB2C3DC885009C2EA5 /* MyFrameworkFromCore */,
+			);
 			productName = SampleFrameworkFromCore;
 			productReference = 078F6DA82C3DC584009C2EA5 /* SampleFrameworkFromCore.app */;
 			productType = "com.apple.product-type.application";
@@ -292,7 +321,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raccoongang.SampleFrameworkFromCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,7 +360,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raccoongang.SampleFrameworkFromCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,6 +390,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		078F6DBB2C3DC885009C2EA5 /* MyFrameworkFromCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyFrameworkFromCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 078F6DA02C3DC584009C2EA5 /* Project object */;
 }

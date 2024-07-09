@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyFrameworkFromCore",
+    name: "SampleFrameworkFromCore",
     platforms: [
         .iOS(.v15)
     ],
@@ -13,22 +13,22 @@ let package = Package(
         .library(
             name: "MyFrameworkFromCore",
             type: .dynamic,
-            targets: ["MyFrameworkFromCore"]),
+            targets: ["MyFrameworkFromCore"]
+        ),
     ],
     dependencies: [
-        .package(url: "https://github.com/volodymyr-chekyrta/SampleReusableCore.git", exact: "1.0.0")
+        .package(url: "https://github.com/volodymyr-chekyrta/SampleReusableCore.git", exact: "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "MyFrameworkFromCore",
-            dependencies: [
-                .product(name: "Core", package: "SampleReusableCore"),
-            ]
+            name: "MyFrameworkFromCore", dependencies: [],
+            path: "MyFrameworkFromCore/Sources/MyFrameworkFromCore"
         ),
         .testTarget(
-            name: "MyFrameworkFromCoreTests",
-            dependencies: ["MyFrameworkFromCore"]),
+            name: "MyFrameworkFromCoreTests", dependencies: ["MyFrameworkFromCore"],
+            path: "MyFrameworkFromCore/Tests/MyFrameworkFromCoreTests"
+        ),
     ]
 )
