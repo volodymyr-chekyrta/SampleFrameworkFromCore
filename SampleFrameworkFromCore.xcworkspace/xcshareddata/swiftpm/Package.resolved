@@ -1,0 +1,24 @@
+{
+  "originHash" : "bdcd2a116de3c00973c09e1d504b71c66d3e27ede6070272f39cee614d56c9d7",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
+      }
+    },
+    {
+      "identity" : "samplereusablecore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/volodymyr-chekyrta/SampleReusableCore.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8be9055a74f716b057fe989e0b5b54c8cafcb2a4"
+      }
+    }
+  ],
+  "version" : 3
+}
